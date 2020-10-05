@@ -32,4 +32,17 @@ public class Apple extends Food{
         return super.toString() + " размера '" + size.toUpperCase() + "'";
     }
 
+    @Override
+    public int calculateCalories() {
+        if (size.equalsIgnoreCase("big")){
+            return 156;
+        }
+        else if (size.equalsIgnoreCase("small")){
+            return 52;
+        }
+        else if (size.equalsIgnoreCase("medium")){
+            return 103;
+        }
+        return 0;
+    }
 }

@@ -2,6 +2,13 @@ package bsu.rfe.java.group10.lab1.Nalivayko.varB13;
 
 public class Tea extends Food {
     private String color;
+    private int sugar;
+
+    public Tea(String color,int sugar) {
+        super("Чаёк");
+        this.color = color;
+        this.sugar = sugar;
+    }
 
     public Tea(String color) {
         super("Чаёк");
@@ -31,4 +38,14 @@ public class Tea extends Food {
     public String toString() {
         return super.toString() + " цвета '" + color.toUpperCase() + "'";
     }
+
+    @Override
+    public int calculateCalories() { return 1;}
+//        if (sugar == 1){
+//            return 65;
+//        }
+//        else if (sugar == 0){
+//            return 2;
+//        }
+//        else {return 1;
 }
