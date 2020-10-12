@@ -1,9 +1,5 @@
 package  bsu.rfe.java.group10.lab1.Nalivayko.varB13;
 
-import static bsu.rfe.java.group10.lab1.Nalivayko.varB13.Comparator.*;
-
-;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -25,9 +21,16 @@ public class Main {
             }
            // itemsSoFar++;
         }
-       /* for (Food item: breakfast){
-            System.out.println(item);
-        }*/
+        Comparator1 com=new Comparator1();
+        for (String arg: args){
+            if(arg.equalsIgnoreCase("-sort")){
+                for(int i=1;i<breakfast.length;i++){
+                    if(breakfast[i-1]!= null) {
+                        com.compare(breakfast[i-1], breakfast[i]);
+                    }
+                }
+            }
+        }
         for (Food item: breakfast) {
             if (item != null)
                 item.consume();
@@ -43,10 +46,6 @@ public class Main {
                }
             }
         }
-
-       for(int i=1;i<breakfast.length;i++) {
-            Comparator.compare(breakfast[i-1], breakfast[i]);
-       }
        System.out.println("  ");
       for (Food item: breakfast){
           if(item!=null) {
